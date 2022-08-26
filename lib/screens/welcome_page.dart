@@ -1,15 +1,17 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_login_signup_ui/screens/register_page.dart';
+import 'package:flutter_login_signup_ui/screens/signIn_page.dart';
 import '../constants.dart';
 import '../widgets/widget.dart';
 
 class WelcomePage extends StatelessWidget {
+  static const String routeName = '/welcomePage';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 25),
           child: Column(
             children: [
               Flexible(
@@ -20,29 +22,29 @@ class WelcomePage extends StatelessWidget {
                         width: MediaQuery.of(context).size.width * 0.8,
                         child: Image(
                           image:
-                          AssetImage('assets/images/team_illustration.png'),
+                              AssetImage('assets/images/welcome.png'),
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
-                    Text(
-                      "Enterprise team\ncollaboration.",
+                    const Text(
+                      "Are You\nHungry?",
                       style: kHeadline,
                       textAlign: TextAlign.center,
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.8,
                       child: Text(
-                        "Bring together your files, your tools, project and people.Including a new mobile and desktop application.",
+                        "Lets eat some delicias Food.   Stay connect with Us",
                         style: kBodyText,
                         textAlign: TextAlign.center,
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -59,10 +61,7 @@ class WelcomePage extends StatelessWidget {
                         bgColor: Colors.white,
                         buttonName: 'Register',
                         onTap: () {
-                          // Navigator.push(
-                          //     context,
-                          //     CupertinoPageRoute(
-                          //         builder: (context) => RegisterPage()));
+                          Navigator.pushNamed(context, RegisterPage.routeName);
                         },
                         textColor: Colors.black87,
                       ),
@@ -72,18 +71,14 @@ class WelcomePage extends StatelessWidget {
                         bgColor: Colors.transparent,
                         buttonName: 'Sign In',
                         onTap: () {
-                          // Navigator.push(
-                          //     context,
-                          //     CupertinoPageRoute(
-                          //       builder: (context) => SignInPage(),
-                          //     ));
+                          Navigator.pushNamed(context, SignInPage.routeName);
                         },
                         textColor: Colors.white,
                       ),
                     ),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),

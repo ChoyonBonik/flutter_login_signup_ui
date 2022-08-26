@@ -4,7 +4,7 @@ import '../constants.dart';
 
 class MyTextField extends StatelessWidget {
   const MyTextField({
-    required Key key,
+    Key? key,
     required this.hintText,
     required this.inputType,
   }) : super(key: key);

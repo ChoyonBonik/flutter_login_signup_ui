@@ -3,7 +3,7 @@ import '../constants.dart';
 
 class MyPasswordField extends StatelessWidget {
   const MyPasswordField({
-    required Key key,
+    Key? key,
     required this.isPasswordVisible,
     required this.onTap,
   }) : super(key: key);

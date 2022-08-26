@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_signup_ui/screens/register_page.dart';
+import 'package:flutter_login_signup_ui/screens/screen.dart';
 import 'package:flutter_login_signup_ui/screens/welcome_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'constants.dart';
@@ -18,7 +20,12 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: WelcomePage(),
+      initialRoute: WelcomePage.routeName,
+      routes: {
+        RegisterPage.routeName: (context) => RegisterPage(),
+        SignInPage.routeName: (context) => SignInPage(),
+        WelcomePage.routeName: (context) => WelcomePage(),
+      },
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_signup_ui/screens/screen.dart';
 import '../constants.dart';
 
 class MyTextButton extends StatelessWidget {
@@ -29,7 +30,10 @@ class MyTextButton extends StatelessWidget {
                 (states) => Colors.black12,
           ),
         ),
-        onPressed: (){},
+        onPressed: (){
+          Navigator.pushNamed(context, RegisterPage.routeName);
+          Navigator.pushNamed(context, SignInPage.routeName);
+        },
         child: Text(
           buttonName,
           style: kButtonText.copyWith(color: textColor),
